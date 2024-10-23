@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Calculator</title>
+	</head>
+	<body>
+        {% if operation == "plus" %}
+          <p>{{ a }} + {{ b }} = {{ a + b }}</p>
+        {% elif operation == "minus" %}
+             <p>{{ a }} - {{ b }} = {{ a - b }}</p>
+<!-- For division and multiplication by yourself -->
+        {% elif operation == "divide" %}
+            {% if b == 0 %}
+                <p>Oops. Cant divide by zero!</p>
+            {% else %}
+                <p>{{ a }} / {{ b }} = {{ a / b }}</p>
+            {% endif %}
+        {% endif %}
+        </body>
+</html>
